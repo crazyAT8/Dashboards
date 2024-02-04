@@ -1,0 +1,88 @@
+URL: https://www.youtube.com/watch?v=zvDvixsjOS8
+
+Problem:
+    I am trying to run a python script that imports dash but I am getting a ModuleNotFoundError: No nodule named 'dash'. Do I need to install dash?
+Answer:
+    Yes, if you're encountering a ModuleNotFoundError: No module named 'dash', 
+        it means that the Dash library is not installed in your Python environment. 
+            Dash is an external library and does not come pre-installed with the standard Python installation. 
+                To resolve this issue, you will need to install Dash using pip, Python's package installer. 
+                    You can do this by running the following command in your terminal or command prompt:
+
+                            pip install dash
+
+        This command will download and install the Dash library and its dependencies, 
+            making it available for import in your Python scripts. 
+                If you are using a virtual environment 
+                (which is recommended for Python projects to manage dependencies more efficiently), 
+                    make sure you activate your virtual environment before installing Dash.
+
+Ran into this error
+
+ERROR: Could not install packages due to an OSError: [WinError 5] Access is denied: 'C:\\Python311\\Lib\\site-packages\\pip\\__init__.py'
+Consider using the `--user` option or check the permissions.
+
+
+[notice] A new release of pip is available: 23.3.2 -> 24.0
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+what command should I run to resolve this?
+
+Answer:
+    To resolve the Access is denied error and the notice about updating pip, you should run two commands. 
+        The first command will address the installation issue by using the --user option, 
+            which installs the package for the current user instead of trying to install it system-wide, 
+            thus avoiding the need for administrator privileges. 
+                The second command will update pip to the latest version as recommended in the notice. 
+                Here are the commands you should run in your terminal or command prompt:
+
+* To install a package and bypass the permission issue, use:
+
+        python -m pip install --user <package-name>
+            
+            in this case the <package-name> is 'dash'
+
+* To update pip to the latest version, as per the notice, run:
+
+        python.exe -m pip install --upgrade pip --user
+
+Note:
+    The --user flag in both commands ensures that the actions are performed 
+        in the user's local environment, 
+            which should circumvent the Access is denied error 
+            by not requiring elevated permissions to access system-wide directories.
+
+
+                    --Success--
+
+What is Dash?
+
+The Dash library in Python is a productive framework for building web applications. It is particularly designed for data visualization and is built on top of Flask, Plotly, and React. With Dash, developers can create interactive, web-based dashboards using pure Python code without the need for direct HTML, CSS, or JavaScript, although these technologies can be incorporated for more advanced customization. Dash is widely used in the data science and analytics community for its ease of use in creating complex, interactive visualizations that can display live data updates.
+
+Dash applications are composed of two parts: the layout, which describes what the application looks like, and the callbacks, which define the interactivity. The layout is defined using a set of pre-defined Dash components, while callbacks are Python functions that are automatically triggered by changes in the input components, allowing for dynamic updates of the app content.
+
+The library is imported in Python code typically with the import statement import dash. Additional components for Dash, such as dash_html_components and dash_core_components, are also commonly imported to extend the functionality and appearance of Dash applications.
+
+Note:
+
+	Deprecated Components: 
+		If you are using Dash version 2.0 or later, 
+			dash_core_components and dash_html_components have been deprecated. 
+		Instead, all components are available directly through dash 
+			(e.g., dash.dcc and dash.html). 
+		Therefore, you should import and use components as follows:
+
+			import dash.dcc as dcc		not	import dash_core_components as dcc
+			import dash.html as html	not	import dash_html_components as html 
+
+		If you are still using an older version of Dash, 
+			ensure that it is correctly installed and imported. 
+		However, it's recommended to update to the latest version and use the updated import statements.
+
+- but truth be told the dash.doc and .html aren't working
+- just a reminder
+    to launch this script 
+        navigate to the fold that its in and 
+        in the terminal type 'python main.py'
+            or 'python fileName.py'
+    and it will launch in your local browser
