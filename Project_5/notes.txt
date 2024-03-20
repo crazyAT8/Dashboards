@@ -1,0 +1,4 @@
+Title: A Minimal Dash App 
+
+url: https://dash.plotly.com/minimal-app
+

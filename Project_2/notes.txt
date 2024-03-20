@@ -1,0 +1,16 @@
+YouTube video
+title: "Python Interactive Dashboards with Plotly Dash - Quick Tutorial"
+URL: https://www.youtube.com/watch?v=UYGwgHhazMA
+
+date: Jan 24, 2021
+
+An intro to plotly Dash in Python with a real-world dataset example. 
+Build interactive, nice-looking, easily sharable, and web-based dashboards in Python!
+
+
+
+Dash app 
+
+    - Layout: determines the visual components diplayed on the Dash app 
+
+    - Callback function: the function that connects the Dash components and defines their interactive features
