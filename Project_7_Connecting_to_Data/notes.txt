@@ -1,0 +1,12 @@
+title: Connecting the Data
+URL: https://dash.plotly.com/tutorial
+
+There are many ways to add data to an app 
+    APIs, 
+    external databases,
+    local .txt files,
+    JSOM files,
+    etc 
+
+This example we will incoperating data from a CSV sheet
+

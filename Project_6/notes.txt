@@ -1,3 +1,14 @@
 Title: Dash in 20 Minutes
 
 url: https://dash.plotly.com/tutorial
+
+When creating Dash apps, 
+    you will almost always use the import statement above. 
+        As you create more advanced Dash apps, you will import more packages.
+
+This line is known as the Dash constructor 
+    and is responsible for initializing your app. 
+        It is almost always the same for any Dash app you create.
+
+The app layout represents the app components that will be displayed in the web browser, normally contained within a html.Div. In this example, a single component was added: another html.Div. The Div has a few properties, such as children, which we use to add text content to the page: "Hello World".
+
